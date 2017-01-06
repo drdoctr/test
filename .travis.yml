@@ -8,5 +8,5 @@ env:
 
 script:
   - touch test # our "docs"
-  - pip install doctr
+  - pip install git+https://github.com/drdoctr/doctr.git@gh-pages-no-push
   - doctr deploy --built-docs .
