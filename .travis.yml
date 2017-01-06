@@ -1,0 +1,12 @@
+language: python
+python:
+  - 3.5
+
+env:
+  global:
+    - secure: "RnmIs1fphXqsawJ0PxHmmCnYAGycJ4buQL/Bei5niDyeslaROF/pXz538kiPHoV6XdWSsGaTS2Oxku5pw3bWQk1CzgXk2e641WezIx5u9cHPYsu9MkFDllPuuoRwUo+bSpFryxM28kEkCF16WHHW0kgUuXYsmJyqiRNITNvEFF1NeXEwWbZybQFXnFnlROHYA21ZMN6zgGKxXDI3JmYTi8VXqzN1a/NMafmKAG7e2r3X68nRWb04JIAr2pcrGd0+NHbG9gRevxSm6mxxhxqZ/f0g+LHlChTkeFNATWGa1mFjAf6ySFuvf0dw5vdFPGJCfHjUNw9pbWS+XH8oHZcy5bCBkpE7A1svE7XNNKnLteZLe8px1OdtQ7spkq5sWa5s+1Ld1WMvk9b49FVTMt/qdsYssNzAonCH9yGieHTDggPuzZVoetn/2RyQdphpoTTA5PYhoi2DR3rZA6ZHjorpcLaQW/lHOgSu6nE5v0UnJgBbwJvT0yBW+ZFg7B6J1pCCz2ybWuM5ws8nktdSwhmeb2tQZP/vc2ZozrlIrYc6wpCvxhJklvsMQWnEIICRhCdZowLzwFAcoBgyaCaFcCuZSFcuVi/NSIu5ZzsF839UoiFNEtfhXwVLBbZUvndxdy6WgMAzTGNe5qveuvTXU3j27H0AMTL4tmjRLigkJpq6+m4="
+
+script:
+  - touch test # our "docs"
+  - pip install git+https://github.com/drdoctr/doctr.git@gh-pages-no-push
+  - doctr deploy --built-docs .
